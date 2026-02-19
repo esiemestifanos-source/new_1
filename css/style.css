@@ -2160,3 +2160,304 @@ p { font-size: clamp(0.9rem, 2vw, 1rem); }
     font-size: 0.8rem;
   }
 }
+/* =========================
+   GENERAL SHOP STYLES
+========================= */
+
+body.shop-page {
+  background-color: #05070d;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.shop-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.shop-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00f0ff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shop-subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+
+.shopify-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Shopify product card adjustments */
+.shopify-buy__product {
+  width: 100% !important;
+}
+
+.shopify-buy__btn {
+  width: 100% !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shopify-buy__btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   SHOP NOTIFICATION
+========================= */
+
+.shop-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #0c0f15;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 14px 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.shop-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.shop-notification i {
+  font-size: 1.2rem;
+  color: #00f0ff;
+}
+
+#notificationMessage {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* =========================
+   SCROLL TO TOP
+========================= */
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(90deg, #00f0ff, #a855f7);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scroll-top i {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+/* =========================
+   RESPONSIVE ADJUSTMENTS
+========================= */
+
+/* Laptop/desktop: 3–4 products per row */
+@media (min-width: 1200px) {
+  .shopify-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet: 2 products per row */
+@media (max-width: 1024px) {
+  .shopify-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone: 2 products per row */
+@media (max-width: 600px) {
+  .shopify-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Very small phone: 1 product per row */
+@media (max-width: 400px) {
+  .shopify-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===================== GEARSOULS SHOP STYLE ===================== */
+
+/* Container for all products */
+.shopify-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px 0;
+}
+
+/* Each Shopify product */
+.shopify-buy__product {
+  background-color: #0c0f15;
+  border-radius: 20px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  flex: 1 1 calc(45% - 48px); /* responsive two side-by-side */
+  max-width: 400px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Product title */
+.shopify-buy__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* Product price */
+.shopify-buy__price {
+  font-size: 1.3rem;
+  color: #cfcfcf;
+  margin-bottom: 16px;
+}
+
+/* Add to cart button */
+.shopify-buy__btn {
+  background-color: #111418;
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 14px 36px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.shopify-buy__btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+/* Quantity input */
+.shopify-buy__quantity-input {
+  font-size: 16px;
+  padding: 12px;
+  background-color: #141821;
+  color: #ffffff;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+/* Responsive: two side-by-side on tablets */
+@media (max-width: 768px) {
+  .shopify-buy__product {
+    flex: 1 1 calc(45% - 24px);
+  }
+}
+
+/* Responsive: full width on phones */
+@media (max-width: 480px) {
+  .shopify-buy__product {
+    flex: 1 1 100%;
+  }
+}
+
+/* Notification style */
+.shop-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,255,255,0.1);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.shop-notification.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Scroll top button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #111418;
+  color: #fff;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  display: block;
+}
+/* ==================== FIX NAVBAR OVERLAP ==================== */
+.shop-section {
+  padding-top: 150px; /* adjust this to match your navbar height */
+}
+
+/* Optional: smooth scroll offset if you use anchor links */
+html {
+  scroll-padding-top: 200px; /* same as navbar height */
+}
